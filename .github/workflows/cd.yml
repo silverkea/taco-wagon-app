@@ -49,6 +49,8 @@ jobs:
     if: github.event.pull_request.merged == true
     permissions:
       id-token: write
+      contents: read
+      actions: read
     uses: ./.github/workflows/deploy-environment.yml
     with:
       environment: dev
@@ -66,6 +68,8 @@ jobs:
     if: github.event.pull_request.merged == true
     permissions:
       id-token: write
+      contents: read
+      actions: read
     uses: ./.github/workflows/deploy-environment.yml
     with:
       environment: staging
