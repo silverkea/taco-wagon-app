@@ -52,6 +52,7 @@ resource "aws_iam_policy" "terraform_deploy" {
           "ec2:DeleteVpc",
           "ec2:DescribeVpcs",
           "ec2:ModifyVpcAttribute",
+          "ec2:DescribeVpcAttribute",
           "ec2:CreateSubnet",
           "ec2:DeleteSubnet",
           "ec2:DescribeSubnets",
@@ -67,7 +68,7 @@ resource "aws_iam_policy" "terraform_deploy" {
           "ec2:AttachInternetGateway",
           "ec2:DetachInternetGateway",
           "ec2:DescribeInternetGateways",
-          "ec2:DescribeAvailabilityZones",
+          "ec2:DescribeAvailabilityZones",          
           "ec2:CreateTags",
           "ec2:DeleteTags",
           "ec2:DescribeTags"
