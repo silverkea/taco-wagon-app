@@ -47,6 +47,8 @@ jobs:
     name: Deploy dev
     needs: [get-run-id]
     if: github.event.pull_request.merged == true
+    permissions:
+      id-token: write
     uses: ./.github/workflows/deploy-environment.yml
     with:
       environment: dev
@@ -62,6 +64,8 @@ jobs:
     name: Deploy staging
     needs: [get-run-id, deploy-dev]
     if: github.event.pull_request.merged == true
+    permissions:
+      id-token: write
     uses: ./.github/workflows/deploy-environment.yml
     with:
       environment: staging
