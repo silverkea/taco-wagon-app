@@ -10,7 +10,7 @@ variable "prefix" {
 
 variable "region" {
   type        = string
-  description = "(Optional) AWS Region to deploy in. Defaults to us-east-1."
+  description = "(Optional) AWS Region to deploy in. Defaults to us-west-2."
   default     = "us-west-2"
 }
 
