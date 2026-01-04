@@ -72,7 +72,8 @@ resource "aws_iam_policy" "terraform_deploy" {
           "ec2:CreateTags",
           "ec2:DeleteTags",
           "ec2:DescribeTags",
-          "ec2:DescribeNetworkAcls"
+          "ec2:DescribeNetworkAcls",
+          "ec2:DescribeSecurityGroups"
         ]
         Resource = "*"
       },
